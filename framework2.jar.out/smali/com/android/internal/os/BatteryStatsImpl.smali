@@ -548,15 +548,15 @@
     .locals 7
 
     .prologue
-    const/4 v6, 0x5
+    const-wide/16 v5, 0x0
 
-    const/4 v5, 0x3
-
-    const/4 v4, 0x0
+    const/4 v4, 0x3
 
     const/4 v3, 0x0
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
+
+    const/4 v1, -0x1
 
     .line 349
     invoke-direct {p0}, Landroid/os/BatteryStats;-><init>()V
@@ -646,7 +646,7 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggables:Ljava/util/ArrayList;
 
     .line 170
-    iput-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
+    iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
     .line 171
     const/4 v0, 0x1
@@ -682,15 +682,13 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
     .line 180
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
     .line 181
-    iput-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
+    iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
     .line 182
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
+    iput-wide v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
 
     .line 184
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
@@ -700,26 +698,30 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     .line 212
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     .line 213
-    new-array v0, v6, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     .line 226
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
     .line 227
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
     .line 228
-    new-array v0, v6, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     .line 233
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
     .line 234
     const/16 v0, 0x12
@@ -736,24 +738,22 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     .line 242
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnUid:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnUid:I
 
     .line 282
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
+    iput-wide v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
     .line 288
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
     .line 290
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
     .line 291
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
     .line 292
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
     .line 297
     new-instance v0, Ljava/util/HashMap;
@@ -763,12 +763,12 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     .line 328
-    new-array v0, v5, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
     .line 329
-    new-array v0, v5, [J
+    new-array v0, v4, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
@@ -808,22 +808,22 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:Ljava/util/HashSet;
 
     .line 1472
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedBufferStates:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedBufferStates:I
 
     .line 1545
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
 
     .line 2364
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
     .line 2388
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
     .line 2420
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
     .line 5289
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
     .line 5290
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
@@ -833,10 +833,10 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 350
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     .line 351
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     .line 352
     return-void
@@ -847,15 +847,15 @@
     .param p1, "p"    # Landroid/os/Parcel;
 
     .prologue
-    const/4 v6, 0x5
+    const-wide/16 v5, 0x0
 
-    const/4 v5, 0x3
-
-    const/4 v4, 0x0
+    const/4 v4, 0x3
 
     const/4 v3, 0x0
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
+
+    const/4 v1, -0x1
 
     .line 4533
     invoke-direct {p0}, Landroid/os/BatteryStats;-><init>()V
@@ -945,7 +945,7 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggables:Ljava/util/ArrayList;
 
     .line 170
-    iput-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
+    iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
     .line 171
     const/4 v0, 0x1
@@ -981,15 +981,13 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
     .line 180
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
     .line 181
-    iput-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
+    iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
     .line 182
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
+    iput-wide v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
 
     .line 184
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
@@ -999,26 +997,30 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     .line 212
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     .line 213
-    new-array v0, v6, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     .line 226
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
     .line 227
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
     .line 228
-    new-array v0, v6, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     .line 233
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
     .line 234
     const/16 v0, 0x12
@@ -1035,24 +1037,22 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     .line 242
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnUid:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnUid:I
 
     .line 282
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
+    iput-wide v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
     .line 288
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
     .line 290
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
     .line 291
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
     .line 292
-    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
+    iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
     .line 297
     new-instance v0, Ljava/util/HashMap;
@@ -1062,12 +1062,12 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     .line 328
-    new-array v0, v5, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
     .line 329
-    new-array v0, v5, [J
+    new-array v0, v4, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
@@ -1107,22 +1107,22 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:Ljava/util/HashSet;
 
     .line 1472
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedBufferStates:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedBufferStates:I
 
     .line 1545
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
 
     .line 2364
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
     .line 2388
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
     .line 2420
-    iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
+    iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
     .line 5289
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
     .line 5290
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
@@ -1132,10 +1132,10 @@
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 4534
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     .line 4535
-    iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
+    iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     .line 4536
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->clearHistoryLocked()V
@@ -1148,13 +1148,13 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 12
+    .locals 11
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    const-wide/16 v10, 0x0
+    const/4 v2, 0x3
 
-    const/4 v9, 0x5
+    const-wide/16 v9, 0x0
 
     const/4 v8, 0x0
 
@@ -1292,7 +1292,7 @@
     iput-boolean v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
     .line 182
-    iput-wide v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
+    iput-wide v9, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryTime:J
 
     .line 184
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
@@ -1305,7 +1305,9 @@
     iput v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     .line 213
-    new-array v1, v9, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -1316,7 +1318,9 @@
     iput v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
     .line 228
-    new-array v1, v9, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
+    const/4 v1, 0x6
+
+    new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -1341,7 +1345,7 @@
     iput v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnUid:I
 
     .line 282
-    iput-wide v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
+    iput-wide v9, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
     .line 288
     iput v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
@@ -1363,16 +1367,12 @@
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     .line 328
-    const/4 v1, 0x3
-
-    new-array v1, v1, [Ljava/lang/String;
+    new-array v1, v2, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
     .line 329
-    const/4 v1, 0x3
-
-    new-array v1, v1, [J
+    new-array v1, v2, [J
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
@@ -1497,7 +1497,9 @@
 
     .local v0, "i":I
     :goto_0
-    if-ge v0, v9, :cond_0
+    const/4 v1, 0x5
+
+    if-ge v0, v1, :cond_0
 
     .line 4499
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -1542,7 +1544,9 @@
     const/4 v0, 0x0
 
     :goto_1
-    if-ge v0, v9, :cond_1
+    const/4 v1, 0x6
+
+    if-ge v0, v1, :cond_1
 
     .line 4504
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -1690,10 +1694,10 @@
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->initTimes()V
 
     .line 4520
-    iput-wide v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackBatteryPastUptime:J
+    iput-wide v9, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackBatteryPastUptime:J
 
     .line 4521
-    iput-wide v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackBatteryPastRealtime:J
+    iput-wide v9, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackBatteryPastRealtime:J
 
     .line 4522
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2885,7 +2889,7 @@
     const/4 v9, 0x0
 
     :goto_2
-    const/16 v26, 0x5
+    const/16 v26, 0x6
 
     move/from16 v0, v26
 
@@ -10877,7 +10881,7 @@
     const/4 v9, 0x0
 
     :goto_1
-    const/4 v2, 0x5
+    const/4 v2, 0x6
 
     if-ge v9, v2, :cond_2
 
@@ -11891,11 +11895,9 @@
 .end method
 
 .method public resetAllStatsLocked()V
-    .locals 6
+    .locals 5
 
     .prologue
-    const/4 v5, 0x5
-
     const/4 v4, 0x0
 
     .line 4672
@@ -11914,7 +11916,9 @@
 
     .local v0, "i":I
     :goto_0
-    if-ge v0, v5, :cond_0
+    const/4 v3, 0x5
+
+    if-ge v0, v3, :cond_0
 
     .line 4676
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -11953,7 +11957,9 @@
     const/4 v0, 0x0
 
     :goto_1
-    if-ge v0, v5, :cond_1
+    const/4 v3, 0x6
+
+    if-ge v0, v3, :cond_1
 
     .line 4683
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -13178,7 +13184,7 @@
 
     .local v0, "i":I
     :goto_0
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     if-ge v0, v1, :cond_2
 
@@ -13943,7 +13949,7 @@
     const/16 v22, 0x0
 
     :goto_1
-    const/16 v35, 0x5
+    const/16 v35, 0x6
 
     move/from16 v0, v22
 
@@ -15804,7 +15810,7 @@
     const/4 v8, 0x0
 
     :goto_1
-    const/16 v17, 0x5
+    const/16 v17, 0x6
 
     move/from16 v0, v17
 
@@ -16459,3 +16465,4 @@
     .line 6083
     return-void
 .end method
+

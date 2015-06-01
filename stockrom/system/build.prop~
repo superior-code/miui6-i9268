@@ -24,7 +24,7 @@ ro.wifi.channels=
 ro.board.platform=omap4
 # ro.build.product is obsolete; use ro.product.device
 ro.build.product=superior
-ro.product.model=GT-I9268
+ro.product.model=GT-I9260
 ro.product.device=superior
 # Do not try to parse ro.build.description or .fingerprint
 ro.build.description=GT-I9260-user 4.1.2 JZO54K I9260ZCAMC1 release-keys
